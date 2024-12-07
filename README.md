@@ -1,23 +1,36 @@
-# Nutritional-Calculator-Web-App
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Nutritional-Calculator-Web-App is a full-stack web application that analyzes food ingredients and recommends healthier alternatives using semantic data. It is built with Node.js and Next.js, and leverages a SPARQL-powered knowledge graph for accurate, real-time nutritional insights. The app is deployed on Vercel.
+## Steps to Set Up the Web App
 
-## Features
+1. **Create a Repository**
+   - Create a new repository in your version control system (e.g., GitHub, GitLab).
+   - Upload the `.ttl` files to the **import** directory within the repository.
 
-- Nutritional Analysis: Evaluate food items for calories, macronutrients, and dietary suitability.
-- Smart Recommendations: Get healthier alternative ingredients based on nutritional data.
-- Real-time Performance: Uses asynchronous operations and caching for a fast user experience.
-- SPARQL Integration: Queries nutritional data from a semantic knowledge graph.
-- Semantic Search: Understands and interprets ingredient inputs intelligently.
+2. **Configure the Backend**
+   - Copy the link to the repository.
+   - Update the `server.js` file:
+     - Set the `GRAPHDB_ENDPOINT` variable to the link of the repository.
+     - Use the `PORT` variable to specify the port where the server will run.
 
-## Tech Stack
+3. **Update Frontend Files**
+   - Modify the server link in the following frontend files to point to the correct backend endpoint:
+     - `SearchBar.tsx`
+     - `FoodList.tsx`
+     - `add-calories/page.tsx`
 
-- Frontend: Next.js, Tailwind CSS
-- Backend: Node.js, SPARQL endpoint
-- Deployment: Vercel
-- Data Layer: Nutritional knowledge graph via SPARQL
+4. **Run Development Server**
+   - Open a terminal and execute the following commands:
+     ```bash
+     npm run dev
+     node server.js
+     ```
 
-## Installation
+5. **Launch the Application**
+   - Once the above commands run successfully, the **Calorie Tracker** web application will be up and running.
+
+## Getting Started
+
+First, run the development server:
 
 ```bash
 git clone https://github.com/DeepanjayNandal/Nutritional-Calculator-Web-App.git
